@@ -145,10 +145,16 @@ def run_prediction(values_dict: dict, state_prefix: str):
             st.success(f"✅ Predicted: **Not Bankrupt** (threshold {threshold:.0%})")
 
 
-st.title("Company Bankruptcy Prediction")
-st.caption(
-    f"Random Forest model · {N_FEATURES} features · predicts one company at a time. "
-    "Set the classification threshold in the sidebar."
+st.title("Find out if a company will go Bankrupt")
+st.markdown(
+    f"""
+    <p style="font-size: 18px;">
+        Identifies 94% of companies at risk of bankruptcy ·
+        Random Forest model · {N_FEATURES} features ·
+        Set the classification threshold in the sidebar.
+    </p>
+    """,
+    unsafe_allow_html=True
 )
 
 tab_manual, tab_json = st.tabs(["Manually Select Features", "Upload JSON"])
@@ -160,7 +166,7 @@ with tab_manual:
     if "manual_values" not in st.session_state:
         st.session_state.manual_values = {}
 
-    st.subheader("1. Enter known feature values")
+    st.subheader("1. Enter known Financial Health Indicators")
     st.caption(
         "Search for a feature below, set its value, and add it. Any feature you "
         "don't set will use its dataset median automatically."
@@ -224,7 +230,7 @@ with tab_manual:
 # OPTION 2: JSON UPLOAD (single company)
 # ==========================================================================
 with tab_json:
-    st.subheader("1. Upload company data (JSON)")
+    st.subheader("1. Upload Financial Health Indicators (JSON)")
     st.caption(
         "Upload a JSON file for a **single company**: either a flat "
         '`{"feature": value, ...}` object, or `{"Company Name": {"feature": value, ...}}`. '
