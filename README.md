@@ -3,7 +3,7 @@
 Predicting corporate bankruptcy risk from financial ratios using a Random Forest classifier, with a full training/inference pipeline and a Streamlit app for interactive scoring.
 
 **🔗 Live demo:** https://bankruptcyprevention-btrwedmajcnqrdqjsmsrnp.streamlit.app/
-![alt text](<Screenshot 2026-08-21 020204.png>)
+![alt text](https://raw.githubusercontent.com/Artneth/Company-Bankruptcy-Prediction/refs/heads/main/assets/app_screenshot/app_screenshot.png)
 
 **📓 Repo:** https://github.com/Artneth/Company-Bankruptcy-Prediction
 
